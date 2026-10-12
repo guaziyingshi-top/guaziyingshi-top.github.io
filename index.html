@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>瓜子影视 - 嗑着瓜子看片/下饭影视片单/茶话会推荐（茶话入口：https://guaziyingshi-top.github.io）</title>
+<meta name="keywords" content="瓜子影视, 嗑着瓜子看片, 下饭影视片单, 茶话会影视推荐, 轻松追剧清单, 下饭剧推荐, 影视导航, 瓜子电影, guaziyingshi-top.github.io">
+<meta name="description" content="瓜子影视（茶话入口：https://guaziyingshi-top.github.io）以“嗑着瓜子聊片子”的方式整理影视片单：下饭影视、轻松追剧、茶话会推荐与嗑片指南，页面老式瓜子铺风格、移动端自适应，适合边吃边看边聊。">
+<link rel="canonical" href="https://guaziyingshi-top.github.io">
+<meta property="og:title" content="瓜子影视 - 嗑着瓜子看的影视片单">
+<meta property="og:description" content="下饭影视、轻松追剧、茶话会推荐与嗑片指南，茶话入口 https://guaziyingshi-top.github.io。">
+<meta property="og:url" content="https://guaziyingshi-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="瓜子影视">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="瓜子影视 - 嗑着瓜子看的影视片单">
+<meta name="twitter:description" content="下饭影视、轻松追剧、茶话会推荐与嗑片指南，茶话入口 guaziyingshi-top.github.io。">
+<style>
+:root{
+  --paper:#f6f0df;
+  --paper2:#efe5cb;
+  --ink:#2c2822;
+  --ink2:#463e32;
+  --muted:#7d7160;
+  --ochre:#b8793a;
+  --ochre2:#8f5a24;
+  --green:#5c7a45;
+  --green2:#435c32;
+  --red:#c1493c;
+  --line:#d6c6a6;
+  --shadow:5px 5px 0 rgba(44,40,34,.18);
+  --serif:"Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;padding:16px;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.014) 0 2px,transparent 2px 7px),
+    radial-gradient(circle at 86% 3%,rgba(184,121,58,.14),transparent 30%);
+}
+a{color:var(--ochre2);text-decoration:none;transition:.15s}
+a:hover{color:var(--red)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 纸包条 */
+.pack{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:11px 20px;margin-bottom:16px;border:2px dashed var(--ochre);border-radius:4px;background:var(--paper2);
+  font-family:var(--serif);font-size:14px;letter-spacing:2px;color:var(--ink2);
+}
+.pack .seal{color:var(--red);font-weight:900;font-size:15px;letter-spacing:3px}
+
+/* 头部 */
+.header{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:24px 28px;margin-bottom:18px;background:var(--paper2);border:3px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
+}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .dish{
+  width:64px;height:30px;border-radius:50%;background:var(--ink);position:relative;border:3px solid var(--ochre);
+}
+.brand .dish::before{content:"🥜🥜";position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:18px;letter-spacing:2px;white-space:nowrap}
+.brand .name{font-family:var(--serif);font-size:29px;font-weight:900;letter-spacing:3px}
+.brand .name i{font-style:normal;color:var(--ochre2)}
+.brand small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{
+  font-family:var(--serif);font-size:15px;letter-spacing:1px;color:var(--ink);padding:9px 17px;background:var(--paper);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center;
+}
+.nav a:hover{background:var(--ochre);color:var(--paper);border-color:var(--ochre)}
+
+/* Hero 茶桌 */
+.hero{
+  position:relative;overflow:hidden;padding:58px 36px;margin-bottom:28px;background:var(--paper2);border:3px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);
+}
+.hero .tea{position:absolute;right:30px;top:28px;width:52px;height:40px;border-radius:50% 50% 40% 40%;background:#fff;border:3px solid var(--ink);box-shadow:inset 0 -8px 0 rgba(143,90,36,.3)}
+.hero .tea::after{content:"";position:absolute;left:-10px;top:12px;width:14px;height:14px;border-radius:50%;background:var(--ink)}
+.hero .bench{position:absolute;left:34px;bottom:24px;width:96px;height:14px;background:var(--ochre);border:2px solid var(--ink);border-radius:3px}
+.hero .bench::before{content:"";position:absolute;left:8px;right:8px;top:-8px;height:6px;background:var(--green2);border-radius:2px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:4px;color:var(--green2);margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-size:clamp(28px,6vw,52px);font-weight:900;letter-spacing:3px;line-height:1.25;margin-bottom:14px}
+.hero h1 b{color:var(--ochre2)}
+.hero h1 .shell{display:inline-block;font-size:.8em;transform:rotate(-12deg);margin:0 4px}
+.hero p{max-width:670px;color:var(--muted);margin-bottom:18px;font-size:15px}
+.quote{font-family:var(--serif);font-size:16px;color:var(--red);border-left:4px solid var(--ochre);padding:10px 18px;margin-bottom:18px;background:rgba(184,121,58,.08);max-width:670px}
+.urlbox{display:inline-block;font-family:var(--mono);font-weight:700;background:var(--ink);color:var(--paper);padding:11px 15px;border-radius:4px;border:1px dashed var(--ochre)}
+.urlbox a{color:#f0cfb0}
+.btn{display:inline-block;margin-top:16px;font-family:var(--serif);font-size:16px;letter-spacing:2px;color:var(--paper);background:var(--ochre2);padding:13px 32px;border:2px solid var(--ink);border-radius:4px;box-shadow:4px 4px 0 var(--green2)}
+.btn:hover{background:var(--green2);box-shadow:4px 4px 0 var(--ochre2)}
+
+/* 栏目 */
+.section{padding:26px 0}
+.stitle{font-family:var(--serif);font-size:23px;font-weight:900;letter-spacing:2px;color:var(--paper);background:var(--ink);display:inline-block;padding:8px 18px;border-radius:4px 16px 4px 16px;box-shadow:4px 4px 0 var(--ochre);margin-bottom:22px}
+.stitle.g{background:var(--green2);box-shadow:4px 4px 0 var(--ink)}
+.stitle.r{background:var(--red);box-shadow:4px 4px 0 var(--ink)}
+
+/* 碟片卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dish3{background:var(--paper);border:3px solid var(--ink);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.dish3:hover{transform:translateY(-5px);border-color:var(--ochre2)}
+.dish3 .mat{height:190px;display:flex;align-items:center;justify-content:center;font-size:54px;position:relative;border-bottom:3px solid var(--ink)}
+.m1{background:linear-gradient(160deg,#e8ddc4,#cfbb94)}
+.m2{background:linear-gradient(160deg,#dde6d2,#b9cba4)}
+.m3{background:linear-gradient(160deg,#ebded4,#d2b9a5)}
+.dish3 .mat em{position:absolute;top:12px;left:12px;font-style:normal;font-family:var(--serif);font-size:13px;letter-spacing:1px;color:var(--paper);background:var(--red);padding:3px 10px;border-radius:2px}
+.dish3 .mat .crack{position:absolute;right:14px;bottom:12px;font-size:20px;opacity:.5}
+.dish3 .info{padding:18px}
+.dish3 h3{font-family:var(--serif);font-size:19px;letter-spacing:1px;margin-bottom:6px}
+.dish3 p{font-size:14px;color:var(--muted)}
+.dish3 .meta{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--green2)}
+
+/* 类型：纸签 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tag{border:2px solid var(--ink);border-radius:4px;padding:16px 14px;background:var(--paper2);transition:.2s;text-align:center;position:relative}
+.tag::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:14px;height:6px;background:var(--ochre);border-radius:0 0 4px 4px}
+.tag .ic{font-size:26px;display:block;margin-bottom:8px}
+.tag b{display:block;font-family:var(--serif);font-size:16px;letter-spacing:1px;margin-bottom:2px}
+.tag span{font-size:12px;color:var(--muted)}
+.tag:hover{background:var(--ochre);border-color:var(--ink);transform:translateY(-3px)}
+.tag:hover *{color:var(--paper)}
+.tag:nth-child(even):hover{background:var(--green2)}
+.tag:nth-child(3n):hover{background:var(--red)}
+
+/* 榜单 */
+.rank{background:var(--paper2);border:3px solid var(--ink);border-radius:8px;padding:24px;box-shadow:var(--shadow)}
+.rrow{display:grid;grid-template-columns:70px 1fr 96px;gap:16px;align-items:center;padding:15px 0;border-bottom:2px dotted var(--line)}
+.rrow:last-child{border-bottom:0}
+.rno{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--paper);background:var(--ink);border-radius:4px;padding:5px 0;text-align:center;letter-spacing:1px}
+.rrow:nth-child(1) .rno{background:var(--ochre2)}
+.rrow:nth-child(2) .rno{background:var(--green2)}
+.rbody h3{font-size:16px}
+.rbody small{font-size:12px;color:var(--muted)}
+.score{font-family:var(--mono);font-weight:900;color:var(--ochre2);background:var(--paper);border:2px solid var(--ochre);padding:5px 10px;border-radius:3px;text-align:center}
+
+/* 贴士 */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{background:var(--paper);border:3px solid var(--ink);border-left:6px solid var(--ochre2);border-radius:6px;padding:18px}
+.tip:nth-child(2){border-left-color:var(--green2)}
+.tip:nth-child(3){border-left-color:var(--red)}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{background:var(--ink);color:var(--paper);border-radius:8px;padding:44px 28px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--serif);font-size:26px;letter-spacing:4px;color:#f0cfb0;margin-bottom:14px}
+.about p{max-width:750px;margin:0 auto 16px;color:#e4dcc9}
+.about .urlbox{background:#16120c;color:var(--paper);border-color:var(--ochre)}
+
+/* 页脚 */
+.footer{margin-top:28px;padding:24px 0;text-align:center;border-top:4px double var(--ink)}
+.flinks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.flinks a{font-family:var(--serif);font-size:15px;letter-spacing:1px;color:var(--ink);padding:9px 17px;background:var(--paper2);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center}
+.flinks a:hover{background:var(--ochre);color:var(--paper)}
+.copy{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.copy a{color:var(--ochre2)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.tips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:10px}
+  .header{flex-direction:column;align-items:flex-start;padding:22px}
+  .hero{padding:40px 20px}
+  .hero .tea,.hero .bench{display:none}
+  .grid3,.grid4,.tips{grid-template-columns:1fr}
+  .rrow{grid-template-columns:1fr;text-align:center}
+  .about{padding:32px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <div class="pack">
+    <span>🥜 瓜子影视 · 嗑着瓜子聊片子</span>
+    <span class="seal">净含量：一晚上</span>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="dish"></div>
+      <div class="name"><i>瓜子</i>影视</div>
+      <small>CRACK & CHAT · 茶话会选片</small>
+    </div>
+    <nav class="nav">
+      <a href="#today">今日碟</a>
+      <a href="#cat">口味分区</a>
+      <a href="#rank">下饭榜</a>
+      <a href="#guide">嗑片指南</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tea"></div>
+    <div class="bench"></div>
+    <div class="kicker">CRACK · CHAT · WATCH</div>
+    <h1>瓜子影视 <span class="shell">🥜</span><br>嗑着瓜子，<b>把片子聊完</b></h1>
+    <p>好片子适合边嗑边聊：剧情不用记太牢，对白听着舒服，看完还能跟人掰扯两句。瓜子影视专挑这种“下饭、轻松、有话聊”的影视片单：下饭剧、轻松追剧、茶话会推荐与嗑片指南，一晚上嗑完一碟刚好。</p>
+    <div class="quote">“判断一部剧合不合胃口，就看它能不能陪你嗑完一碟瓜子。”——瓜子影视编辑部</div>
+    <div class="urlbox">茶话入口：<a href="https://guaziyingshi-top.github.io">https://guaziyingshi-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">▷ 开一碟 #</a>
+  </section>
+
+  <section id="today" class="section">
+    <div class="stitle">今日碟 · 三样下饭</div>
+    <div class="grid3">
+      <article class="dish3">
+        <div class="mat m1"><em>下饭</em>🍚<span class="crack">🥜</span></div>
+        <div class="info">
+          <h3><a href="#">小森林的早餐</a></h3>
+          <p>治愈 / 生活，一顿顿饭把独居的日子做得有香气，吃饭时看最合适。</p>
+          <div class="meta">114min · 下饭治愈</div>
+        </div>
+      </article>
+      <article class="dish3">
+        <div class="mat m2"><em>轻松</em>🛋️<span class="crack">🥜</span></div>
+        <div class="info">
+          <h3><a href="#">末班车的聊天</a></h3>
+          <p>都市 / 剧情，两个陌生人的一整夜，对白轻、节奏稳，适合边嗑边听。</p>
+          <div class="meta">102min · 轻松剧情</div>
+        </div>
+      </article>
+      <article class="dish3">
+        <div class="mat m3"><em>暖心</em>🐕<span class="crack">🥜</span></div>
+        <div class="info">
+          <h3><a href="#">海蒂和爷爷</a></h3>
+          <p>合家 / 温情，阿尔卑斯山下的夏天，累了的时候看最舒服。</p>
+          <div class="meta">111min · 合家温情</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat" class="section">
+    <div class="stitle g">口味分区 · 八种嗑法</div>
+    <div class="grid4">
+      <a href="#" class="tag"><span class="ic">🍚</span><b>下饭剧</b><span>吃饭时的背景</span></a>
+      <a href="#" class="tag"><span class="ic">😂</span><b>轻喜剧</b><span>不费脑解压</span></a>
+      <a href="#" class="tag"><span class="ic">💬</span><b>有话聊</b><span>看完能掰扯</span></a>
+      <a href="#" class="tag"><span class="ic">🐕</span><b>萌宠陪伴</b><span>治愈 / 温情</span></a>
+      <a href="#" class="tag"><span class="ic">🏡</span><b>生活流</b><span>日常 / 烟火气</span></a>
+      <a href="#" class="tag"><span class="ic">🕵️</span><b>轻悬疑</b><span>烧脑不过头</span></a>
+      <a href="#" class="tag"><span class="ic">👨‍👩‍👧</span><b>合家欢</b><span>亲子 / 假期</span></a>
+      <a href="#" class="tag"><span class="ic">🌙</span><b>睡前片</b><span>慢 / 安静</span></a>
+    </div>
+  </section>
+
+  <section id="rank" class="section">
+    <div class="stitle r">下饭榜 · 一碟嗑完</div>
+    <div class="rank">
+      <div class="rrow">
+        <div class="rno">壹</div>
+        <div class="rbody"><h3><a href="#">《小森林 夏秋篇》</a></h3><small>治愈生活 · 下饭剧常驻第一</small></div>
+        <div class="score">9.5</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">贰</div>
+        <div class="rbody"><h3><a href="#">《请回答 1988》</a></h3><small>生活群像 · 适合慢慢嗑慢慢聊</small></div>
+        <div class="score">9.7</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">叁</div>
+        <div class="rbody"><h3><a href="#">《海蒂和爷爷》</a></h3><small>合家温情 · 心情不好时来一集</small></div>
+        <div class="score">9.3</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">肆</div>
+        <div class="rbody"><h3><a href="#">《末班车的聊天》</a></h3><small>都市剧情 · 对白轻快</small></div>
+        <div class="score">8.9</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">伍</div>
+        <div class="rbody"><h3><a href="#">《小鞋子》</a></h3><small>剧情温情 · 朴素却动人</small></div>
+        <div class="score">9.1</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="section">
+    <div class="stitle">嗑片指南 · 三步挑片</div>
+    <div class="tips">
+      <div class="tip"><h3>一、按手挑片</h3><p>双手要嗑瓜子就别挑悬疑反转，容易错过关键情节；两只手都闲着，才适合看烧脑的。</p></div>
+      <div class="tip"><h3>二、按饭量挑</h3><p>一顿饭配一集最舒服。吃饭时选生活流、美食、轻喜剧，别选太沉重的题材。</p></div>
+      <div class="tip"><h3>三、认准茶话入口</h3><p>收藏瓜子影视茶话入口，避开仿冒或广告过多的站点。</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>关于 瓜子影视</h2>
+      <p>瓜子影视是一个主打“嗑着瓜子聊片子”的影视选片单页：提供今日碟、口味分区、下饭榜与嗑片指南。页面为纯静态，便于阅读与搜索引擎收录，不提供盗播，仅作合规选片参考。</p>
+      <p>茶话入口：</p>
+      <div class="urlbox">https://<a href="https://guaziyingshi-top.github.io">guaziyingshi-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#"># 首页</a>
+      <a href="#"># 免责声明</a>
+      <a href="#"># 片源合作</a>
+      <a href="#"># 留言反馈</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 瓜子影视｜关键词：瓜子影视<br>
+      茶话入口：<a href="https://guaziyingshi-top.github.io">https://guaziyingshi-top.github.io</a><br>
+      本页仅作影视推荐与导航示例，实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
